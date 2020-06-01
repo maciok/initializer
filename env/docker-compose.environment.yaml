@@ -1,0 +1,10 @@
+version: "3"
+services:
+  initdb:
+    image: "postgres:12.3-alpine"
+    environment:
+      POSTGRES_PASSWORD: "somestrongpassword"
+      POSTGRES_USER: "init_user"
+      POSTGRES_DB: "initdb"
+    ports:
+      - "5432:5432"
